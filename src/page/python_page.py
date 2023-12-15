@@ -18,3 +18,6 @@ class PythonPage(PageFactory):
 
   def click_go_button(self):
     self.go_button.click()
+
+  def assert_is_element_present(self):
+    return self.go_button.visibility_of_element_located()

@@ -9,7 +9,7 @@ class SampleTest(unittest.TestCase):
   def setUp(self):
     service = Service()
     options = webdriver.ChromeOptions()
-    options.add_argument('--headless')
+    # options.add_argument('--headless')
     self.driver = webdriver.Chrome(service=service, options=options)
     self.driver.get("https://python.org/")
 
@@ -17,7 +17,7 @@ class SampleTest(unittest.TestCase):
     pp = PythonPage(self.driver)
     pp.sendtext_search_bar("Selenium")
     pp.click_go_button()
-    pass
+    assert(pp.assert_is_element_present())
 
   def tearDown(self):
     self.driver.close()
