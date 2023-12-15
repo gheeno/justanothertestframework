@@ -1,0 +1,4 @@
+selenium-page-factory
+selenium
+allure-pytest
+pytest
