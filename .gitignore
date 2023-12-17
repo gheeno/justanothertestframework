@@ -2,4 +2,5 @@ __pycache__
 .pytest_cache
 .venv
 JATF.egg-info
-#allure-report
+allure-report
+allure-results

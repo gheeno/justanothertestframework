@@ -27,14 +27,10 @@ Perform commands from root folder ```/justanothertestframework```
 ### Reporting
 1. Robotframework : `./results`
 2. Allure : 
-- Generate : 
-    ```commandline
-    ~ allure generate allure-results -o allure-report --clean
-    ```
-- Serve : 
-    ```commandline
-    ~ allure serve allure-results
-    ```
+    1. Run the test `~ pytest --alluredir=allure-results`
+    2. Generate the results  `~ allure generate allure-results --clean -o allure-report`
+    3. Move history from report to results `~ mkdir -p allure-results/history && cp -r allure-report/history/* allure-results/history/ || true`
+    4. Run report : `~ allure serve`
 
 
 ### Notes : 
@@ -44,7 +40,6 @@ Perform commands from root folder ```/justanothertestframework```
 
 ### TODO : 
 1. Implement BDD
-2. Add screenshot to reporting
-3. Define proper steps in reporting ( Allure )
+2. Define proper steps in reporting ( Allure )
     - This is solved in robotframework.
-4. Test Tagging ( None Robotframework. )
+3. Test Tagging ( None Robotframework. )

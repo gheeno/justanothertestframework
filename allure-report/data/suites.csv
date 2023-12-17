@@ -1,4 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu Dec 14 22:26:12 MST 2023","Thu Dec 14 22:26:14 MST 2023","2149","src.test","test_python_page","PythonPageTest","","","test_sample_test","
-    NOTE : Test method needs to have `test_` as a prefix, for pytest to search for the method accurately.
-    "
