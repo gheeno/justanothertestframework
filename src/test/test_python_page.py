@@ -1,6 +1,7 @@
 import os
 import sys
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.insert(0, os.path.abspath(os.path.join(
+  os.path.dirname(__file__), '..')))
 from page.python_page import PythonPage
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -26,12 +27,14 @@ class PythonPageTest(unittest.TestCase):
     '''
     Simple python page test.
     '''
-    #NOTE : Test method needs to have `test_` as a prefix, for pytest to search for the method accurately.
+    #NOTE : Test method needs to have `test_` as a prefix, 
+    #for pytest to search for the method accurately.
     pp = PythonPage(self.driver)
     pp.sendtext_search_bar("Selenium")
     pp.click_go_button()
     assert(pp.assert_is_element_present())
-    allure.attach(self.driver.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
+    allure.attach(self.driver.get_screenshot_as_png(), 
+                  name="Screenshot", attachment_type=AttachmentType.PNG)
 
 
   def tearDown(self):
